@@ -88,7 +88,7 @@
 //     hasTail: true,
 //     color: 'grey'
 // })
-
+//=================================================
 // class Component {
 //     constructor(selector){
 //         this.$el = document.querySelector(selector)
@@ -138,26 +138,163 @@
 // })
 //======================================================
 
-class Animal {
-    constructor(options){
-this.name=options.name
-this.age=options.age
-this.hasTail=options.hasTail
-    }
-}
-const animal1 = new Animal({
-    name:'Animal',
-    age: 23,
-    hasTail: true
-})
+// class Animal {
+//     constructor(options){
+// this.name=options.name
+// this.age=options.age
+// this.hasTail=options.hasTail
+//     }
+// }
+// const animal1 = new Animal({
+//     name:'Animal',
+//     age: 23,
+//     hasTail: true
+// })
 
-class Cat extends Animal {}
-const cat1 = new Cat({
-    name: 'Cat',
-    age: 32,
-    hasTail: true
-})
+// class Cat extends Animal {}
+// const cat1 = new Cat({
+//     name: 'Cat',
+//     age: 32,
+//     hasTail: true
+// })
 
-for(key in cat1){
-    console.log('Key Cat', key)
+// for(key in cat1){
+//     console.log('Key Cat', key)
+// }
+
+// const person = Object.create({
+//     calculateAge(){
+//         console.log(new Date().getFullYear()-this.birthYear)
+//     }
+// },{
+//     name: {
+//         value: 'Vladilen',
+//         enumerable: true,
+//         writable: true,
+//         configurable: true
+//     },
+//     birthYear: {
+//         value: 1990
+//     },
+//     age: {
+//         get(){
+//             return new Date().getFullYear()-this.birthYear
+//         },
+//         set(value){
+//             document.body.style.background = 'red'
+//             console.log(value)
+//         }
+//     }
+// })
+
+// person.name = 'Gennadii'
+// delete person.name
+// for(key in person){
+//     if(person.hasOwnProperty('key')){
+//     console.log('Key', person[key])
+//     }
+// }
+
+// class Animal{
+//     constructor(options){
+//         this.name=options.name
+//         this.age=options.age
+//         this.hasTail=options.hasTail
+//     }
+//     voice(){
+//         console.log('uf')
+//     }
+//     // get currentDate(){
+//     //     return new Date().getDay()+':'+ new Date().getMonth()+':'+ new Date().getFullYear()
+//     // }
+// get getInfo(){
+//     return this.age*7
+// }
+//     set getInfo(newAge){
+//         this.age = newAge
+//     }
+// } 
+
+// class Cat extends Animal{
+//     static type = 'CAT'
+// constructor(options){
+//     super(options)
+//     this.color=options.color
+// }
+// voice(){
+// super.voice()
+// console.log('myau')
+// }
+// }
+
+// const cat1 = new Cat({
+//     name: 'Cat',
+//     age: 23,
+//     hasTail: true,
+//     color: 'grey'
+// })
+
+// class Component {
+//     constructor(selector){
+//         this.$el=document.querySelector(selector)
+//     }
+//     hide(){
+//         this.$el.style.display='none'
+//     }
+
+//     show(){
+//         this.$el.style.display='block'
+//     }
+// }
+
+// class Box extends Component{
+//     constructor(options){
+//         super(options.selector)
+//         this.$el.style.width=this.$el.style.height = options.size+'px'
+//         this.$el.style.background=options.color
+//     }
+// }
+
+// class Circle extends Box{
+//     constructor(options){
+//         super(options)
+//         this.$el.style.borderRadius='50%'
+//     }
+// }
+
+// const box1 = new Box({
+//     selector: '#box1',
+//     size: 100,
+//     color: 'red'
+// })
+
+// const box2 = new Box({
+//     selector: '#box2',
+//     size: 150,
+//     color: 'blue'
+// })
+
+// const circle = new Circle({
+//     selector: '#circle',
+//     size: 200,
+//     color: 'green'
+// })
+//==================================================
+
+//Async, Await
+
+console.log('start')
+
+console.log('start2')
+
+function timeOutTwoSec(){
+    console.log('twoSec')
 }
+
+window.setTimeout(function(){
+    console.log('insideTimeOut 5 sec')
+}, 5000)
+
+console.log('End')
+
+setTimeout(timeOutTwoSec, 2000)
