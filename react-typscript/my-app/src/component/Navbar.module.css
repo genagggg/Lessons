@@ -1,0 +1,31 @@
+.superDiv{
+    position: relative;
+    background: grey;
+    transition: all 3s ease 0s;
+}
+
+.superDiv:hover{
+transform: translate(0, 50px)
+}
+
+.navBarList{
+    display: flex;
+}
+
+.navLi{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.transformBlock{
+    position: relative;
+    left: -50px;
+    background: red;
+    width: 100px;
+    height: 100px;
+   transition: all 2s ease 0s;
+}
+
+.transformBlock:hover{
+    transform :translate(50px, 0)
+}

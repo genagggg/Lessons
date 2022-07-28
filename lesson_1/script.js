@@ -283,18 +283,199 @@
 
 //Async, Await
 
-console.log('start')
+// console.log('start')
 
-console.log('start2')
+// console.log('start2')
 
-function timeOutTwoSec(){
-    console.log('twoSec')
-}
+// function timeOutTwoSec(){
+//     console.log('twoSec')
+// }
 
-window.setTimeout(function(){
-    console.log('insideTimeOut 5 sec')
-}, 5000)
+// window.setTimeout(function(){
+//     console.log('insideTimeOut 5 sec')
+// }, 5000)
 
-console.log('End')
+// console.log('End')
 
-setTimeout(timeOutTwoSec, 2000)
+// setTimeout(timeOutTwoSec, 2000)
+//==================================================
+
+
+// const person = Object.create({},{
+//     name: {
+//         value: 'Gennadii',
+//         enumerable: true
+//     },
+//     surname: {
+//         value: 'Gorokhov',
+//         enumerable: true,
+//     },
+//     fullName: {
+//         get(){
+//             return `${this.name} ${this.surname}`
+//         }
+//     }
+// })
+//===============================================
+
+// let person = {
+//     name: 'Lev',
+//     surname: 'Tolstoy',
+//     get fullName(){
+//         return `${this.name} ${this.surname}`
+//     }
+// }
+
+// alert(person.fullName)
+
+// let word = 'животное бегало по полю и ело траву'
+// let mm = word.split(' ').reverse().join('--')
+
+// let predlocation = 'а роза упала на руку азора'
+// let reversePredlocation = predlocation.split(' ').reverse()
+// console.log(reversePredlocation.join('+'))
+
+// class Animal {
+//     constructor(options){
+//         this.name=options.name
+//         this.age=options.age
+//         this.hasTail=options.hasTail
+//     }
+// }
+
+// const animal1 = new Animal({
+//     name: 'Obezyana',
+//     age: 35,
+//     hasTail: true,
+    
+
+// })
+
+// for(key in animal1){
+//     console.log(animal1[key])
+// }
+
+// class Cat extends Animal{
+//     constructor(options){
+//         super(options)
+//         this.color=options.color
+//     }
+// }
+
+// let cat1 = new Cat({
+//     name: 'Vasya',
+//     age: 25,
+//     hasTail: true,
+//     color: 'red'
+// })
+//Реализация добавления и удаления квадрата
+// class Component{
+//     constructor(selector){
+//         this.$el=document.querySelector(selector)
+//     }
+
+//     hide(){
+//         this.$el.style.display = 'none'
+//     }
+
+//     show(){
+//         this.$el.style.display = 'block'
+//     }
+// }
+
+// class Box extends Component{
+//     constructor(options){
+//         super(options.selector)
+//         this.$el.style.width=this.$el.style.height=options.size+'px'
+//     this.$el.style.background = options.color
+//     }
+// }
+
+// const box1 = new Box({
+//     selector: '#box1',
+//     size: 100,
+//     color: 'red'
+// })
+
+// class Circle extends Box{
+//     constructor(options){
+//         super(options)
+//         this.$el.style.borderRadius = "50%"
+//     }
+// }
+
+// const circle1 = new Circle({
+//     selector: '#circle',
+//     size: 250,
+//     color: 'yellow'
+// })
+
+// let buttonVkl = document.querySelector('.vkl')
+// buttonVkl.addEventListener('click', function(event){
+//    if(box1.$el.style.display=='none'){
+//     box1.show()
+//    }
+//    else(
+//     box1.hide()
+//    )
+// })
+//=====================================================
+
+//Асинхроннорсть >>>
+
+console.log('Request dta....')
+// setTimeout(function(){
+// console.log('Preparing dats...')
+// const bakcendData = {
+//     server: 'aws',
+//     port: 2000,
+//     status: 'working'
+// }
+// setTimeout(function(){
+// console.log('Data resived...', bakcendData)
+// }, 2000);
+// }, 3000)
+
+//Promise
+
+// const p = new Promise(function(resolve, reject){
+// setTimeout(function(){
+//     console.log('preparing data...')
+//     const person = {
+//         name: 'Oleg',
+//         age: 25,
+//         color: 'green'
+//     }
+//     setTimeout(function(){
+// console.log('Data resived...', person)
+//     }, 2000)
+//     resolve()
+// }, 5000)
+// })
+
+// p.then(data=>{
+//     console.log('Promise resolved', data)
+// })
+
+// const p = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+// console.log('preparing data...')
+// const person = {
+//     name: 'Oleg',
+//     age: 23,
+//     color: 'red'
+// }
+// resolve(person)
+//     },2000)
+// }).then(data=>{
+//     return new Promise((resolve, reject)=>
+//     {
+//         setTimeout(
+//             function()
+//         {
+//             data.modify='true'
+//         },2000
+//         )
+        
+//     }
+// )
