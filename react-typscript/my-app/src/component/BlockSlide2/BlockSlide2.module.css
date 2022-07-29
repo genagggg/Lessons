@@ -1,0 +1,12 @@
+.blockSlide{
+    width: 100px;
+    height: 100px;
+    background: green;
+    transition: all 3s ease 0s; 
+    position: relative;
+    left: -70px;
+}
+
+.blockSlide:hover{
+    transform: translate(50px, 0)
+}
